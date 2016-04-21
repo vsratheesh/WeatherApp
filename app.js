@@ -32,13 +32,6 @@ $(document).ready(function () {
       url: forecastStr,
       error: function () {},
       success: function (data) {
-        // var filtered = data.list.filter(function (v, i, a) {
-        //   while (i >= 1) {
-        //     date1 = new Date(v.dt * 1000).getDate();
-        //     date2 = new Date(a[i - 1].dt * 1000).getDate();
-        //     return date1 !== date2 ? v : "";
-        //   }
-        // });
         var innerHtml = "";
         $('#textInfo').text('Forecast for 5 days for city ' + cityName + ',' + data.city.country);
         data.list.forEach(function (e) {
